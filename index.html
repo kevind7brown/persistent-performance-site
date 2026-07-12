@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Persistent Performance — BJJ Longevity for 40+ Grapplers</title>
+<meta name="description" content="Two total hip replacements. Two broken heels. Still competing. Kevin Brown, PT and 3rd-degree BJJ black belt, teaches 40+ grapplers how to keep training for decades.">
+<style>
+  :root{
+    --ink:#1c1815;
+    --ink-soft:#544a40;
+    --paper:#eeece6;
+    --paper-raised:#f8f6f1;
+    --accent:#8c2f2a;
+    --accent-2:#ad8748;
+    --line:rgba(28,24,21,.15);
+    --line-soft:rgba(28,24,21,.08);
+    --serif:ui-serif,"Iowan Old Style","Palatino Linotype",Georgia,"Times New Roman",serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --ink:#eee9e0; --ink-soft:#c2b8ab; --paper:#161210; --paper-raised:#201b17;
+      --accent:#e08e7d; --accent-2:#dcb87d; --line:rgba(238,233,224,.16); --line-soft:rgba(238,233,224,.08);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ink:#eee9e0; --ink-soft:#c2b8ab; --paper:#161210; --paper-raised:#201b17;
+    --accent:#e08e7d; --accent-2:#dcb87d; --line:rgba(238,233,224,.16); --line-soft:rgba(238,233,224,.08);
+  }
+  :root[data-theme="light"]{
+    --ink:#1c1815; --ink-soft:#544a40; --paper:#eeece6; --paper-raised:#f8f6f1;
+    --accent:#8c2f2a; --accent-2:#ad8748; --line:rgba(28,24,21,.15); --line-soft:rgba(28,24,21,.08);
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--accent);color:var(--paper-raised)}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+
+  .wrap{max-width:920px;margin:0 auto;padding:0 clamp(1.25rem,4vw,2.5rem)}
+
+  /* ---- Stripe motif: a belt with degree stripes, used as a section divider ---- */
+  .belt{display:flex;gap:6px;align-items:center;height:8px;margin:0 auto}
+  .belt span{display:block;width:26px;height:8px;background:var(--accent)}
+  .belt span:nth-child(2){background:var(--accent-2)}
+  .belt span:nth-child(3){background:var(--accent)}
+
+  header.nav{
+    position:sticky;top:0;z-index:10;background:color-mix(in srgb, var(--paper) 88%, transparent);
+    backdrop-filter:blur(8px);border-bottom:1px solid var(--line-soft);
+  }
+  header.nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:1.1rem clamp(1.25rem,4vw,2.5rem)}
+  .brand{font-family:var(--serif);font-weight:600;font-size:1.05rem;letter-spacing:-.01em;text-decoration:none}
+  .nav-links{display:flex;gap:1.8rem;font-size:.88rem}
+  .nav-links a{text-decoration:none;color:var(--ink-soft)}
+  .nav-links a:hover{color:var(--ink)}
+  @media (max-width:560px){.nav-links{display:none}}
+
+  /* ---- Hero ---- */
+  .hero{padding:5.5rem 0 4rem;text-align:center}
+  .hero .eyebrow{
+    font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;
+  }
+  .hero h1{
+    font-family:var(--serif);font-weight:600;font-size:clamp(2.4rem,6vw,4.1rem);
+    margin:.9rem auto 1.1rem;text-wrap:balance;letter-spacing:-.015em;max-width:16ch;line-height:1.06;
+  }
+  .hero p.lede{font-size:1.18rem;color:var(--ink-soft);max-width:46ch;margin:0 auto;text-wrap:pretty}
+  .hero .cta-row{display:flex;gap:1rem;justify-content:center;margin-top:2.2rem;flex-wrap:wrap}
+
+  .btn{
+    display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.5rem;border-radius:2px;
+    font-size:.95rem;font-weight:600;text-decoration:none;border:1px solid transparent;
+  }
+  .btn-primary{background:var(--accent);color:var(--paper-raised)}
+  .btn-primary:hover{background:color-mix(in srgb, var(--accent) 85%, black)}
+  .btn-ghost{border-color:var(--line);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--ink-soft)}
+
+  /* ---- Credibility strip ---- */
+  .stats{padding:2.5rem 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;text-align:center}
+  @media (max-width:700px){.stats .wrap{grid-template-columns:1fr 1fr}}
+  .stat b{display:block;font-family:var(--serif);font-size:1.9rem;color:var(--accent-2)}
+  .stat span{font-size:.82rem;color:var(--ink-soft)}
+
+  /* ---- Story ---- */
+  section{padding:5rem 0}
+  .s-eyebrow{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-2);font-weight:700;text-align:center}
+  h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.7rem,3.5vw,2.3rem);margin:.5rem 0 1.6rem;text-align:center;text-wrap:balance}
+  .story-body{max-width:62ch;margin:0 auto;font-size:1.06rem}
+  .story-body p{margin:1rem 0}
+  .pull{
+    font-family:var(--serif);font-size:1.35rem;line-height:1.55;color:var(--accent);
+    text-align:center;max-width:34ch;margin:2.2rem auto;text-wrap:balance;
+  }
+
+  /* ---- What's here now ---- */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;max-width:760px;margin:0 auto}
+  @media (max-width:640px){.cards{grid-template-columns:1fr}}
+  .card{background:var(--paper-raised);border:1px solid var(--line-soft);border-radius:3px;padding:1.8rem}
+  .card .tag{font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--accent-2)}
+  .card h3{font-family:var(--serif);font-size:1.25rem;margin:.5rem 0 .6rem}
+  .card p{color:var(--ink-soft);font-size:.95rem;margin:0 0 1rem}
+  .card a.link{font-size:.9rem;font-weight:600;color:var(--accent);text-decoration:none}
+  .card a.link:hover{text-decoration:underline}
+
+  /* ---- Email capture ---- */
+  .capture{background:var(--paper-raised);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .capture .inner{max-width:520px;margin:0 auto;text-align:center}
+  .capture h2{margin-bottom:.6rem}
+  .capture p{color:var(--ink-soft);max-width:42ch;margin:0 auto 2rem}
+  form.signup{display:flex;gap:.6rem;max-width:420px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+  form.signup input[type="email"]{
+    flex:1 1 220px;padding:.85rem 1rem;border:1px solid var(--line);border-radius:2px;
+    background:var(--paper);color:var(--ink);font-size:.95rem;font-family:var(--sans);
+  }
+  form.signup input[type="email"]:focus{outline:2px solid var(--accent);outline-offset:1px}
+  .form-note{font-size:.78rem;color:var(--ink-soft);margin-top:.9rem}
+
+  footer{padding:3rem 0 4rem;text-align:center}
+  footer .belt{margin-bottom:1.6rem}
+  footer p{font-size:.85rem;color:var(--ink-soft)}
+  footer a{text-decoration:none;color:var(--ink-soft)}
+  footer a:hover{color:var(--ink)}
+
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="#">Persistent Performance</a>
+      <nav class="nav-links">
+        <a href="#story">Story</a>
+        <a href="#now">What's here</a>
+        <a href="#list">Get the guide</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">BJJ Longevity for 40+ Grapplers</div>
+      <h1>Two hips. Still rolling.</h1>
+      <p class="lede">Kevin Brown, PT for 38 years and 3rd-degree BJJ black belt, has two total hip replacements — and still competes. This is training built to outlast the joints.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#list">Get the free guide</a>
+        <a class="btn btn-ghost" href="https://www.youtube.com/@persistentperformance" target="_blank" rel="noopener">Watch on YouTube</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="belt"><span></span><span></span><span></span></div>
+
+  <section class="stats">
+    <div class="wrap">
+      <div class="stat"><b>38</b><span>years as a PT</span></div>
+      <div class="stat"><b>2</b><span>total hip replacements</span></div>
+      <div class="stat"><b>3°</b><span>degree black belt</span></div>
+      <div class="stat"><b>63</b><span>years old, still training</span></div>
+    </div>
+  </section>
+
+  <section id="story">
+    <div class="wrap">
+      <div class="s-eyebrow">The Story</div>
+      <h2>Built from the inside of the injury</h2>
+      <div class="story-body">
+        <p>Kevin wrestled at the University of Iowa under Dan Gable, then spent 38 years as a physical therapist — sports medicine, industrial rehab, geriatrics, fall prevention. In 2006 he started Brazilian Jiu-Jitsu. He's now a 3rd-degree black belt who has won Masters divisions at Worlds and Pan Ams.</p>
+        <p>Along the way: a dislocated elbow, both shoulders operated on, both knees scoped, both heels broken at once — three months in a wheelchair — and two total hip replacements. He returned to competition after every one of them.</p>
+        <p class="pull">"I have two artificial hips and I still compete." Nobody in BJJ has told this story before.</p>
+        <p>Persistent Performance exists to turn that recovery — clinical and personal — into a system other 40+ grapplers can use: how to train around an aging or replaced joint, how to come back after surgery, and how to keep training for decades instead of quitting after the first serious injury.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="belt"><span></span><span></span><span></span></div>
+
+  <section id="now">
+    <div class="wrap">
+      <div class="s-eyebrow">What's Here Now</div>
+      <h2>Free, while the course comes together</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="tag">Available now</div>
+          <h3>YouTube — Fundamental Movements</h3>
+          <p>Free breakdowns of the core BJJ movements — technical stand-up, bridging, sit-out, Granby roll, and more — each tied back to how it's actually used on the mat.</p>
+          <a class="link" href="https://www.youtube.com/@persistentperformance" target="_blank" rel="noopener">Watch the channel →</a>
+        </div>
+        <div class="card">
+          <div class="tag">Coming soon</div>
+          <h3>The Hip Course</h3>
+          <p>A focused course for grapplers who've had — or are considering — a total hip replacement: prehab, the first 90 days, and a real path back to live rolling.</p>
+          <a class="link" href="#list">Get notified →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="capture" id="list">
+    <div class="wrap inner">
+      <div class="s-eyebrow">Get The Guide</div>
+      <h2>3 Rules for Training BJJ With an Artificial Hip</h2>
+      <p>A short, free guide on training around a hip replacement — and the first place you'll hear when the course opens.</p>
+
+      <a class="btn btn-primary" href="http://eepurl.com/gqV7oPADx3" target="_blank" rel="noopener">Send it to me</a>
+      <p class="form-note">Opens a quick signup page. No spam. Unsubscribe any time.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="belt"><span></span><span></span><span></span></div>
+      <p>Persistent Performance · San Diego, CA · <a href="mailto:persistentperformancept@gmail.com">persistentperformancept@gmail.com</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
+</content>
