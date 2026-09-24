@@ -107,6 +107,21 @@
     text-align:center;max-width:34ch;margin:2.2rem auto;text-wrap:balance;
   }
 
+  /* ---- Story photo ---- */
+  .story-photo{max-width:420px;margin:2.4rem auto 0}
+  .story-photo img{border-radius:8px}
+  .story-photo p{font-size:.8rem;color:var(--ink-soft);text-align:center;margin-top:.7rem}
+
+  /* ---- Guide feature (hamstring guide teaser) ---- */
+  .guide-feature{display:flex;gap:2.2rem;align-items:center;max-width:780px;margin:0 auto}
+  .guide-feature-img{flex:1 1 260px}
+  .guide-feature-img img{border-radius:8px}
+  .guide-feature-text{flex:1 1 320px}
+  .guide-feature-text p{color:var(--ink-soft);font-size:1rem;margin:0 0 1.2rem}
+  .guide-feature-text a.link{font-size:.95rem;font-weight:600;color:var(--accent);text-decoration:none}
+  .guide-feature-text a.link:hover{text-decoration:underline}
+  @media (max-width:640px){.guide-feature{flex-direction:column}}
+
   /* ---- What's here now ---- */
   .cards{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;max-width:760px;margin:0 auto}
   @media (max-width:640px){.cards{grid-template-columns:1fr}}
@@ -147,7 +162,8 @@
       <nav class="nav-links">
         <a href="#story">Story</a>
         <a href="#now">What's here</a>
-        <a href="#list">Get the guide</a>
+        <a href="#hamstrings">Hamstrings</a>
+        <a href="#list">Get the guides</a>
       </nav>
     </div>
   </header>
@@ -159,7 +175,7 @@
       <p class="tagline">You're not getting too old. You just need to train and exercise wisely.</p>
       <p class="lede">Kevin Brown, MPT, PT for 38 years and 3rd-degree BJJ black belt, has two total hip replacements — and still trains. Training built to outlast the joints: mobility first, strength second, whatever sport you play.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="#list">Get the free guide</a>
+        <a class="btn btn-primary" href="#list">Get the free guides</a>
         <a class="btn btn-ghost" href="https://www.youtube.com/@persistentperformance" target="_blank" rel="noopener">Watch on YouTube</a>
       </div>
     </div>
@@ -185,6 +201,10 @@
         <p>Along the way: a dislocated elbow, both shoulders operated on, both knees scoped, both heels broken at once — three months in a wheelchair — and two total hip replacements. He returned to competition after every one of them.</p>
         <p class="pull">"I have two artificial hips and I still train." Nobody in BJJ has told this story before.</p>
         <p>Persistent Performance exists to turn that recovery — clinical and personal — into a system anyone can use: how to train around an aging or replaced joint, how to come back after surgery, and how to keep training for decades instead of quitting after the first serious injury.</p>
+        <div class="story-photo">
+          <img src="kevin-rolling.jpg" alt="Kevin Brown rolling in Brazilian Jiu-Jitsu, working a guard-passing exchange">
+          <p>Still on the mats — two artificial hips and all.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -212,11 +232,29 @@
     </div>
   </section>
 
+  <section id="hamstrings">
+    <div class="wrap">
+      <div class="s-eyebrow">Also Free</div>
+      <h2>Why Your Hamstrings Won't Loosen Up</h2>
+      <div class="guide-feature">
+        <div class="guide-feature-img">
+          <img src="kevin-hamstring-stretch.jpg" alt="Kevin Brown demonstrating a hamstring stretch on the BJJ mats">
+        </div>
+        <div class="guide-feature-text">
+          <p>Tight hamstrings usually aren't the only problem, but they can be a direct cause of compensation elsewhere — and sometimes they're compensating for something else entirely. This free guide breaks down why stretching harder doesn't always work, and what to actually check first.</p>
+          <a class="link" href="#list">Get the guide →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="belt"><span></span><span></span><span></span></div>
+
   <section class="capture" id="list">
     <div class="wrap inner">
-      <div class="s-eyebrow">Get The Guide</div>
-      <h2>3 Rules for Training BJJ With an Artificial Hip</h2>
-      <p>A short, free guide on training around a hip replacement — and the first place you'll hear when the course opens.</p>
+      <div class="s-eyebrow">Get The Guides</div>
+      <h2>Two Free Guides, Delivered Together</h2>
+      <p>"3 Rules for Training BJJ With an Artificial Hip" and "Why Your Hamstrings Won't Loosen Up" — plus the first word when the course opens.</p>
 
       <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="cb2b72ad-96ee-4516-a01b-d2ed3cbaacf5"></script>
       <script type="text/javascript" async src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
