@@ -85,7 +85,7 @@
   .btn-ghost{border-color:var(--line);color:var(--chalk)}
   .btn-ghost:hover{border-color:var(--chalk-soft)}
   .hero-photo{position:relative;overflow:hidden}
-  .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:40% 30%;filter:contrast(1.08) saturate(.9)}
+  .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:64% 28%;filter:contrast(1.08) saturate(.9)}
   .hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--mat) 0%,rgba(12,13,15,0) 28%)}
   .hero-photo .tag{position:absolute;right:20px;bottom:20px;z-index:2;font-family:var(--display);font-weight:600;font-size:14px;letter-spacing:.18em;text-transform:uppercase;background:rgba(12,13,15,.75);padding:8px 12px}
   @media (max-width:900px){
@@ -311,7 +311,6 @@
   .guide-img:hover img{transform:scale(1.03)}
   .guide-img .free{z-index:2;transition:transform .5s var(--ease)}
   .guide-img:hover .free{transform:rotate(-6deg) scale(1.06)}
-  .full-photo img{height:122%;margin-top:-11%;will-change:transform}
   .ledger li{transition:transform .2s var(--ease)}
   .ledger li em{display:inline-block}
   .js .ledger.in li em{animation:stamp .5s var(--ease) both}
@@ -415,8 +414,8 @@
       </div>
     </div>
     <div class="hero-photo">
-      <img src="kevin-rolling.jpg" alt="Kevin Brown rolling in Brazilian Jiu-Jitsu, working a guard-passing exchange">
-      <span class="tag">On the mats, San Diego</span>
+      <img src="kevin-competition.jpg" alt="Kevin Brown in a white gi pinning an opponent with knee on belly during a Brazilian Jiu-Jitsu competition">
+      <span class="tag">On the mats</span>
     </div>
   </section>
 
@@ -478,7 +477,7 @@
   </section>
 
   <figure class="full-photo" style="margin:0">
-    <img src="kevin-rolling.jpg" alt="" aria-hidden="true">
+    <img src="kevin-worlds.jpg" alt="Kevin Brown in a white Gracie Barra gi with his black belt, competing at Worlds" style="object-position:58% 0%">
     <figcaption>Two artificial hips and all.</figcaption>
   </figure>
 
@@ -619,7 +618,7 @@
 
   // nav pill tightens on scroll + slow parallax on the wide photo
   const nav = document.querySelector('header.nav');
-  const photo = document.querySelector('.full-photo'), pimg = photo && photo.querySelector('img');
+  const photo = null, pimg = null; // parallax off: wide band must keep his head in frame
   let ticking = false;
   function onScroll(){
     nav.classList.toggle('scrolled', scrollY > 40);
