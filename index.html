@@ -235,6 +235,13 @@
   .feature-quote .by b{font-family:var(--display);font-weight:800;font-size:28px;letter-spacing:.03em;text-transform:uppercase}
   .feature-quote .by span{font-size:16px;color:rgba(255,255,255,.82)}
   @media (max-width:900px){.feature-quote{grid-template-columns:1fr}}
+  .feature-pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;margin-bottom:40px;align-items:stretch}
+  .feature-pair .feature-quote{grid-template-columns:1fr;grid-template-rows:auto 1fr;gap:20px;margin-bottom:0;padding:clamp(28px,3.5vw,48px)}
+  .feature-pair .feature-quote>div:last-child{display:flex;flex-direction:column}.feature-pair .feature-quote blockquote{flex:1}
+  .feature-pair .feature-quote .label{font-size:clamp(36px,3.4vw,52px)}
+  .feature-pair .feature-quote blockquote{font-size:clamp(17px,1.35vw,20px)}
+  .feature-pair .feature-quote .by{flex-direction:column;gap:4px}
+  @media (max-width:900px){.feature-pair{grid-template-columns:minmax(0,1fr)}}
   /* ---- Testimonials ---- */
   .reviews-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
   .reviews-head h2{margin-bottom:0}
@@ -485,6 +492,7 @@
       <div class="reviews-head reveal">
         <div><div class="eyebrow">In Their Words</div><h2>They bounced back too</h2></div>
       </div>
+      <div class="feature-pair">
       <figure class="feature-quote reveal" style="margin-left:0;margin-right:0">
         <div>
           <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
@@ -495,6 +503,17 @@
           <figcaption class="by"><b>Martin Cooper</b><span>Member, National Academy of Engineering</span><span>Inventor of the handheld cell phone</span><span>97 years old in 2026</span></figcaption>
         </div>
       </figure>
+      <figure class="feature-quote reveal" style="margin-left:0;margin-right:0">
+        <div>
+          <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="label">Methodical</p>
+        </div>
+        <div>
+          <blockquote>&ldquo;After two extensive shoulder surgeries (torn rotator cuff, supraspinatus, and long head of the biceps) plus knee surgery for a torn meniscus and microfracture, I was diligent and consistent with Kevin's post-surgery rehab. His care was incredible: efficient, professional, and hands-on. He was slow and methodical, talked me through every exercise and modality, and mapped out my recovery over many months.&rdquo;</blockquote>
+          <figcaption class="by"><b>Cameron O&rsquo;Brien</b><span>Southport Sharks, 1985&ndash;1995 (Australian rules football)</span><span>Captain-coach of the undefeated 1992 premiership team</span><span>Two-time premiership player, 1990 &amp; 1992</span></figcaption>
+        </div>
+      </figure>
+      </div>
     </div>
   </section>
 
