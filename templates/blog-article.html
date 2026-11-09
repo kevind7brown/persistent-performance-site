@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!--
+  ARTICLE TEMPLATE. To publish a new article:
+  1. Copy this file to /blog/<url-slug>/index.html (slug = primary keyword, e.g. why-are-my-hips-so-tight).
+  2. Replace every {{PLACEHOLDER}}, and delete the noindex line below.
+  3. Add a .post-card for it on /blog/index.html and a <url> entry in /sitemap.xml.
+-->
+<meta name="robots" content="noindex">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE, under 60 characters, primary keyword first}} | Persistent Performance</title>
+<meta name="description" content="{{META DESCRIPTION, 140-155 characters, includes primary keyword}}">
+<link rel="canonical" href="https://persistentperformance.com/blog/{{SLUG}}/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://persistentperformance.com/blog/{{SLUG}}/">
+<meta property="og:title" content="{{TITLE}}">
+<meta property="og:description" content="{{META DESCRIPTION}}">
+<meta property="og:image" content="https://persistentperformance.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/logo-icon.png">
+<link rel="apple-touch-icon" href="/logo-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/blog/blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{TITLE}}",
+  "description": "{{META DESCRIPTION}}",
+  "url": "https://persistentperformance.com/blog/{{SLUG}}/",
+  "datePublished": "{{YYYY-MM-DD}}",
+  "dateModified": "{{YYYY-MM-DD}}",
+  "image": "https://persistentperformance.com/og-image.png",
+  "author": {
+    "@type": "Person",
+    "name": "Kevin Brown, MPT",
+    "jobTitle": "Physical Therapist",
+    "url": "https://persistentperformance.com/#story"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Persistent Performance",
+    "logo": {"@type": "ImageObject", "url": "https://persistentperformance.com/logo-icon.png"}
+  }
+}
+</script>
+<script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="/"><img src="/logo-icon.png" alt="">Persistent Performance</a>
+      <nav class="nav-links">
+        <a href="/#story">Story</a>
+        <a href="/blog/" aria-current="page">Blog</a>
+        <a href="/#hamstrings">Free Guide</a>
+        <a href="https://www.youtube.com/@persistentperformance" target="_blank" rel="noopener">YouTube</a>
+        <a class="nav-cta" href="https://persistent-performance.mvt.so/" target="_blank" rel="noopener">Start Free Trial</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="article">
+      <div class="wrap">
+        <a class="eyebrow" href="/blog/" style="text-decoration:none">&larr; Blog · {{TOPIC}}</a>
+        <h1>{{H1, same as title or close to it}}</h1>
+        <div class="byline">
+          <img src="/kevin-worlds.jpg" alt="Kevin Brown, MPT">
+          <span><b>Kevin Brown, MPT</b> · PT for 38 years, two hip replacements<br><time datetime="{{YYYY-MM-DD}}">{{Month D, YYYY}}</time> · {{N}} min read</span>
+        </div>
+
+        <!-- The direct answer: 2-4 sentences that answer the search query outright. Google and AI search quote this part. -->
+        <p class="answer">{{SHORT ANSWER}}</p>
+
+        <div class="prose">
+          <p>{{Opening: why this matters, a line from Kevin's own experience}}</p>
+
+          <h2>{{Section heading, phrased the way people search}}</h2>
+          <p>{{Body}}</p>
+
+          <h2>{{Section heading}}</h2>
+          <p>{{Body}}</p>
+
+          <h2>{{Section heading}}</h2>
+          <p>{{Body}}</p>
+
+          <p class="disclaimer">This article is for general education and isn't medical advice. If you have pain, a recent injury or surgery, check with your doctor or physical therapist before starting a new exercise program.</p>
+        </div>
+
+        <!-- 2-4 related articles once they exist -->
+        <nav class="related" aria-label="Related articles">
+          <div class="eyebrow">Keep reading</div>
+          <ul>
+            <li><a href="/blog/{{RELATED-SLUG}}/">{{Related article title}}</a></li>
+          </ul>
+        </nav>
+      </div>
+    </article>
+
+    <section class="cta-panel">
+      <div class="eyebrow">Free Guide</div>
+      <h2>Why your hamstrings won't loosen up</h2>
+      <p>Get the free guide plus new articles in your inbox. The full Persistent Performance program is coming soon.</p>
+      <a class="btn btn-primary" href="/#list">Get the guide</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="belt" aria-hidden="true"><div class="black"></div><div class="bar"><i></i><i></i><i></i></div><div class="tip"></div></div>
+    <div class="wrap row">
+      <span>Persistent Performance · San Diego, CA</span>
+      <a href="mailto:persistentperformancept@gmail.com">persistentperformancept@gmail.com</a>
+    </div>
+  </footer>
+
+</body>
+</html>
