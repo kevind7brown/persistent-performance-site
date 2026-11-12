@@ -242,7 +242,12 @@
   .feature-pair .feature-quote .label{font-size:clamp(36px,3.4vw,52px)}
   .feature-pair .feature-quote blockquote{font-size:clamp(17px,1.35vw,20px)}
   .feature-pair .feature-quote .by{flex-direction:column;gap:4px}
-  @media (max-width:900px){.feature-pair{grid-template-columns:minmax(0,1fr)}}
+  .feature-pair{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+  .feature-pair .feature-quote{padding:clamp(26px,2.6vw,36px)}
+  .feature-pair .feature-quote .label{font-size:clamp(32px,2.8vw,42px)}
+  .feature-pair .feature-quote blockquote{font-size:clamp(16px,1.2vw,18px)}
+  .feature-pair .feature-quote .by b{font-size:22px}
+  @media (max-width:1000px){.feature-pair{grid-template-columns:minmax(0,1fr)}}
   /* ---- Testimonials ---- */
   .reviews-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
   .reviews-head h2{margin-bottom:0}
@@ -505,6 +510,16 @@
         <div>
           <blockquote>&ldquo;Kevin Brown is a master Physical therapist. His insight into my personal needs and his ability to challenge me without harmfully overexercising my body has resulted in a near-miraculous recovery from four joint replacements and two surgeries. These occurred over a period of 4 years during which my strength and balance severely deteriorated. I am now close to normal and on my way to being in better condition than I was when I was five years younger. Kevin's work has extended my life and allowed me to be as productive as ever.&rdquo;</blockquote>
           <figcaption class="by"><b>Martin Cooper</b><span>Member, National Academy of Engineering</span><span>Inventor of the handheld cell phone</span><span>97 years old in 2026</span></figcaption>
+        </div>
+      </figure>
+      <figure class="feature-quote reveal" style="margin-left:0;margin-right:0">
+        <div>
+          <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="label">Trusted</p>
+        </div>
+        <div>
+          <blockquote>&ldquo;I've known Kevin Brown for over twenty years at Gracie Barra Encinitas. In that time I've watched him help a lot of our students: knees, shoulders, backs, all the injuries that come with jiu-jitsu. He helps people keep training instead of sitting on the sidelines. He's helped me personally with my back, my shoulder, and my hip. As an instructor, my body is my job. Kevin showed me how to keep moving and get stronger so I could stay on the mat. What makes Kevin different is that he's a physical therapist who has been training for decades. He knows what our bodies go through because he goes through it too. If you want to keep training jiu-jitsu for a long time, I recommend Kevin.&rdquo;</blockquote>
+          <figcaption class="by"><b>Professor Rafael &ldquo;Foca&rdquo; Ramos</b><span>5th-Degree Black Belt</span><span>Co-Founder, Gracie Barra Encinitas</span></figcaption>
         </div>
       </figure>
       <figure class="feature-quote reveal" style="margin-left:0;margin-right:0">
