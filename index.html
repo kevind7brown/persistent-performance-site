@@ -72,12 +72,16 @@
   /* ---- Hero: split, photo bleeds off the right edge ---- */
   .hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);min-height:min(100vh,940px);border-bottom:1px solid var(--line)}
   .hero-text{display:flex;flex-direction:column;justify-content:center;padding:112px clamp(16px,5vw,72px) 64px}
-  .hero h1{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(64px,9vw,136px);line-height:.88;letter-spacing:-.005em;margin:18px 0 28px}
+  .hero h1{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(52px,6.2vw,100px);line-height:.9;letter-spacing:-.005em;margin:6px 0 28px}
+  .hero-cred{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(24px,2.4vw,36px);line-height:1;letter-spacing:.02em;margin:18px 0 0}
+  .hero-cred .blue{color:var(--blue-hi)}
   .hero h1 span{display:block}
   .hero h1 .blue{color:var(--blue-hi)}
   .hero .tagline{font-size:clamp(20px,1.8vw,24px);font-weight:600;max-width:30ch;margin:0 0 14px}
   .hero .lede{color:var(--chalk-soft);max-width:44ch;margin:0}
   .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px}
+  .hero-app{margin:16px 0 0;font-size:15px;line-height:1.6;color:var(--chalk-soft)}
+  .hero-app a{color:var(--blue-hi);font-weight:600;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
   .btn{display:inline-flex;align-items:center;gap:10px;padding:18px 26px;font-family:var(--display);font-weight:800;font-size:19px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border:2px solid transparent;transition:background .2s,border-color .2s,transform .2s}
   .btn:active{transform:translateY(1px)}
   .btn-primary{background:var(--blue);color:#fff}
@@ -97,10 +101,10 @@
 
   /* ---- Stats: scoreboard ---- */
   .stats{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}
-  .stat{padding:36px 24px;border-right:1px solid var(--line)}
+  .stat{padding:29px 22px;border-right:1px solid var(--line)}
   .stat:last-child{border-right:0}
-  .stat b{display:block;font-family:var(--display);font-weight:800;font-size:clamp(56px,6vw,88px);line-height:.9}
-  .stat span{display:block;margin-top:10px;font-family:var(--display);font-weight:600;font-size:16px;letter-spacing:.16em;text-transform:uppercase;color:var(--chalk-soft)}
+  .stat b{display:block;font-family:var(--display);font-weight:800;font-size:clamp(45px,4.8vw,70px);line-height:.9}
+  .stat span{display:block;margin-top:8px;font-family:var(--display);font-weight:600;font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--chalk-soft)}
   @media (max-width:760px){.stats{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}}
 
   section{padding:clamp(72px,10vw,128px) 0}
@@ -290,13 +294,13 @@
   @keyframes drop{from{opacity:0;transform:translateY(-12px) scale(.97)}to{opacity:1;transform:none}}
   @keyframes settle{from{opacity:0;transform:scale(1.05)}to{opacity:1;transform:scale(1)}}
   header.nav .wrap{animation:drop .6s var(--ease) .05s both}
-  .hero .eyebrow{animation:fade .5s ease .1s both}
+  .hero .eyebrow,.hero .hero-cred{animation:fade .5s ease .1s both}
   .hero h1 span{animation:rise .7s var(--ease) both}
   .hero h1 span:nth-child(1){animation-delay:.12s}
   .hero h1 span:nth-child(2){animation-delay:.2s}
   .hero .tagline{animation:rise .6s var(--ease) .3s both}
   .hero .lede{animation:rise .6s var(--ease) .36s both}
-  .hero .cta-row{animation:rise .6s var(--ease) .42s both}
+  .hero .cta-row,.hero .hero-app{animation:rise .6s var(--ease) .42s both}
   .hero-photo{animation:fade .6s ease .1s both}
   .hero-photo img{animation:settle 1.2s var(--ease) .05s both}
   .hero-photo .tag{animation:rise .5s var(--ease) .6s both}
@@ -421,13 +425,15 @@
   <section class="hero" style="padding:0">
     <div class="hero-text">
       <div class="eyebrow">Injury Recovery &amp; Longevity Training</div>
-      <h1><span>Two hips.</span><span class="blue">Still rolling.</span></h1>
-      <p class="tagline">You're not getting too old. You just need to train and exercise wisely.</p>
-      <p class="lede">Kevin Brown, MPT, PT for 38 years and 3rd-degree BJJ black belt, has two total hip replacements and still trains. Mobility first, strength second, whatever sport you play.</p>
+      <p class="hero-cred">Two hips. <span class="blue">Still rolling.</span></p>
+      <h1><span>You can too.</span><span class="blue">Let's get you rolling.</span></h1>
+      <p class="tagline">You're not too old. You just need a smarter plan.</p>
+      <p class="lede">Mobility first, then strength. A simple program built by Kevin Brown, MPT, a physical therapist of 38 years and 3rd-degree BJJ black belt.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="#course">See the program</a>
-        <a class="btn btn-ghost" href="#hamstrings">Free guide</a>
+        <a class="btn btn-primary" href="https://persistent-performance.mvt.so/" target="_blank" rel="noopener">Start your free week</a>
+        <a class="btn btn-ghost" href="#course">See the program</a>
       </div>
+      <p class="hero-app">7 days free, then $25 a month. Cancel any time.<br><span aria-hidden="true">📱</span> Open the app: <a href="https://persistent-performance.mvt.so/" target="_blank" rel="noopener">persistent-performance.mvt.so</a></p>
     </div>
     <div class="hero-photo">
       <img src="kevin-competition.jpg" alt="Kevin Brown in a white gi pinning an opponent with knee on belly during a Brazilian Jiu-Jitsu competition">
@@ -446,7 +452,7 @@
     <div class="wrap course-grid">
       <div class="reveal">
         <div class="eyebrow">The Program · Open Now</div>
-        <h2>Hip and Knee Mobility Fundamentals</h2>
+        <h2>Hip &amp; Knee Mobility Level One</h2>
         <p>A focused course for rebuilding hip and knee mobility after injury or surgery, with a real path back to the sport you love.</p>
         <a class="btn btn-primary" href="https://persistent-performance.mvt.so/" target="_blank" rel="noopener">Start your free week</a><br>
         <span class="status">7 days free, then $25 a month. Cancel any time.</span>
@@ -578,6 +584,10 @@
         <a class="btn btn-primary ig-follow" href="https://www.instagram.com/persistentperformancept/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>@persistentperformancept</a>
       </div>
       <div class="ig-grid stagger">
+        <a class="ig-tile" href="https://www.instagram.com/reel/DfskA3kTP4Z/" target="_blank" rel="noopener">
+          <img src="instagram/DfskA3kTP4Z.jpg" alt="Hip replacement #2, 3 years later: mobility, then stability, then strengthening." loading="lazy" width="332" height="444">
+          <span class="ig-cap">Hip replacement #2, 3 years later: mobility → stability → strength.</span>
+        </a>
         <a class="ig-tile" href="https://www.instagram.com/reel/De7AkH7qn4b/" target="_blank" rel="noopener">
           <img src="instagram/De7AkH7qn4b.jpg" alt="Rolling wrecks necks. Two quick fixes I use with my jiu-jitsu guys." loading="lazy" width="332" height="444">
           <span class="ig-cap">Rolling wrecks necks. Two quick fixes I use with my jiu-jitsu guys.</span>
@@ -605,10 +615,6 @@
         <a class="ig-tile" href="https://www.instagram.com/reel/DcWZuEwqCy4/" target="_blank" rel="noopener">
           <img src="instagram/DcWZuEwqCy4.jpg" alt="Master Marcelo Pereira: 40 years in Brazilian Jiu Jitsu." loading="lazy" width="332" height="444">
           <span class="ig-cap">Master Marcelo Pereira: 40 years in Brazilian Jiu Jitsu.</span>
-        </a>
-        <a class="ig-tile" href="https://www.instagram.com/reel/DcKhRGmKfOD/" target="_blank" rel="noopener">
-          <img src="instagram/DcKhRGmKfOD.jpg" alt="Two total hip replacements. Still training jiu-jitsu." loading="lazy" width="332" height="444">
-          <span class="ig-cap">Two total hip replacements. Still training jiu-jitsu.</span>
         </a>
       </div>
     </div>
