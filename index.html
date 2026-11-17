@@ -403,6 +403,14 @@
     .marquee:hover .marquee-track{animation-play-state:paused}
   }
   @media (prefers-reduced-motion: reduce){.ledger li:hover,.btn:hover,.stat:hover,.review:hover{transform:none!important}}
+  .hero-split{display:flex;flex-direction:column;gap:6px;align-self:center}
+  @media (min-width:901px){.hero-split{width:85%;margin-left:auto;margin-right:auto}.hero-text{padding-left:clamp(16px,10vw,160px)}}
+  @media (max-width:420px){.brand{font-size:15px;letter-spacing:.02em;white-space:nowrap;gap:8px}.brand img{height:34px!important;width:34px!important;border-radius:9px!important}.nav-links a.nav-cta{font-size:12px;padding:8px 11px;white-space:nowrap;letter-spacing:.08em}}
+  .hero-split figure{position:relative;margin:0;overflow:hidden}
+  .hero-split img{display:block;width:100%;height:auto!important;object-fit:contain;filter:none}
+  .hero-split figure:first-child img{aspect-ratio:1800/1460}
+  .hero-split figure:last-child img{aspect-ratio:1038/878}
+  @media (max-width:900px){.hero-photo.hero-split{aspect-ratio:auto}}
 </style>
 <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
 <script defer src="/_vercel/insights/script.js"></script>
@@ -428,16 +436,16 @@
       <p class="hero-cred">Two hips. <span class="blue">Still rolling.</span></p>
       <h1><span>You can too.</span><span class="blue">Let's get you rolling.</span></h1>
       <p class="tagline">You're not too old. You just need a smarter plan.</p>
-      <p class="lede">Mobility first, then strength. A simple program built by Kevin Brown, MPT, a physical therapist of 38 years and 3rd-degree BJJ black belt.</p>
+      <p class="lede">Mobility first, then strength. A simple program built by Kevin Brown, PT, MPT, a physical therapist of 38 years and 3rd-degree BJJ black belt.</p>
       <div class="cta-row">
         <a class="btn btn-primary" href="https://persistent-performance.mvt.so/" target="_blank" rel="noopener">Start your free week</a>
         <a class="btn btn-ghost" href="#course">See the program</a>
       </div>
       <p class="hero-app">7 days free, then $25 a month. Cancel any time.<br><span aria-hidden="true">📱</span> Open the app: <a href="https://persistent-performance.mvt.so/" target="_blank" rel="noopener">persistent-performance.mvt.so</a></p>
     </div>
-    <div class="hero-photo">
-      <img src="kevin-competition.jpg" alt="Kevin Brown in a white gi pinning an opponent with knee on belly during a Brazilian Jiu-Jitsu competition">
-      <span class="tag">On the mats</span>
+    <div class="hero-photo hero-split">
+      <figure><img src="kevin-competition-cool.jpg" alt="Kevin Brown in a white gi pinning an opponent with knee on belly during a Brazilian Jiu-Jitsu competition"><span class="tag">On the mats</span></figure>
+      <figure><img src="kevin-coaching.jpg" alt="Kevin Brown coaching a client through a loaded side-lying hip exercise outdoors"><span class="tag">Coaching</span></figure>
     </div>
   </section>
 
